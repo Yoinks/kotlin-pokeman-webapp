@@ -5,7 +5,7 @@ import java.sql.ResultSet
 
 data class Pokemans(val id: Int, val name: String, val type: String)
 
-var PokemansRowMapper: RowMapper<Pokemans> = RowMapper<Pokemans> { resultSet: ResultSet, rowIndex: Int ->
+val PokemansRowMapper: RowMapper<Pokemans> = RowMapper<Pokemans> { resultSet: ResultSet, rowIndex: Int ->
     Pokemans(
             resultSet.getInt("id"),
             resultSet.getString("name"),
